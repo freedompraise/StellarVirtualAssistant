@@ -375,7 +375,7 @@ small,
 .btn {
   display: inline-block;
   font-weight: 400;
-  color: #0b4f91;
+  color: var(--white);
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -409,7 +409,7 @@ small,
   }
 }
 .btn:hover {
-  color: #0b2e91;
+  color: #212529;
   text-decoration: none;
 }
 .btn:focus {
@@ -1953,6 +1953,12 @@ label {
 @media (min-width: 992px) {
   .col-lg-4 {
     max-width: 33.33%;
+  }
+}
+
+@media (max-width: 767px) {
+  .col-md-6 {
+    max-width: 100%;
   }
 }
 
