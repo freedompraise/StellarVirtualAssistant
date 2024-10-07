@@ -332,14 +332,55 @@
   $(document).ready(function () {
     var $typewriterText = $(".typewriter");
     var originalText = $typewriterText.html();
+    var firstLetter = originalText.charAt(0); // First letter to retain
+    var fullText = originalText.slice(1); // Rest of the text
+    var typingSpeed = 100; // Typing speed in ms
+    var deletingSpeed = 150; // Deleting speed in ms
+    var delayBetweenCycles = 2000; // Delay before restarting the cycle
+    var currentText = firstLetter; // Initialize with first letter
 
-    function resetTyping() {
-      $typewriterText.html("");
-      setTimeout(function () {
-        $typewriterText.html(originalText);
-      }, 1000);
+    function typeText(text, index) {
+      if (index < text.length) {
+        currentText += text.charAt(index);
+        $typewriterText.html(currentText);
+        setTimeout(function () {
+          typeText(text, index + 1);
+        }, typingSpeed);
+      } else {
+        setTimeout(deleteText, delayBetweenCycles); // Delay before deletion starts
+      }
     }
 
-    setInterval(resetTyping, 4000);
+    $(document).ready(function () {
+      var $typewriterText = $(".typewriter");
+      var originalText = $typewriterText.html();
+      var resetTyping = function () {
+        $typewriterText.html("H");
+        setTimeout(function () {
+          $typewriterText.html(originalText);
+        }, 1000);
+      };
+      setInterval(resetTyping, 6000);
+    });
+  });
+
+  $(document).ready(function () {
+    var items = [
+      "Virtual Assistant",
+      "Project Manager",
+      "Vacation Rental VA",
+      "Virtual Coach",
+      "Let's Collaborate!",
+    ];
+    var $textElement = $(".swapping-text");
+    var currentIndex = 0;
+    function switchText() {
+      $textElement.fadeOut(function () {
+        $textElement.html(items[currentIndex]);
+        $textElement.fadeIn();
+        currentIndex = (currentIndex + 1) % items.length;
+      });
+    }
+    setInterval(switchText, 4000);
   });
 })(jQuery);

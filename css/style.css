@@ -1020,8 +1020,7 @@ h1.typewriter {
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid white;
-  animation: typing 3.5s steps(30) infinite alternate,
-    blink 0.75s step-end infinite;
+  animation: typing 6s steps(30) infinite alternate, blink 0.75s step-end infinite;
 }
 
 .compressed-text {
@@ -1948,8 +1947,3 @@ label {
   }
 }
 
-@media (max-width: 767px) {
-  .col-md-6 {
-    max-width: 100%;
-  }
-}
