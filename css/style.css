@@ -651,7 +651,7 @@ small,
 }
 
 .navbar-dark .navbar-brand {
-  color: var(--white);
+  color: var(--primary);
 }
 .navbar-dark .navbar-brand:hover,
 .navbar-dark .navbar-brand:focus {
