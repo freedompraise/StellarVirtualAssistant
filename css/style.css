@@ -1950,3 +1950,39 @@ label {
   }
 }
 
+#hire {
+  background: var(--primary);
+}
+
+#hire h2 {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#hire p.lead {
+  font-size: 1.25rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+#hire .btn-primary {
+  border-radius: 50px;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+}
+
+#hire .btn-primary:hover {
+  color: var(--secondary) !important;
+}
+
+#hire .ta-link {
+  color: var(--secondary) !important;
+  font-weight: 400;
+}
+
+#hire .ta-link:hover {
+  color: var(--light) !important;
+}
+
+#hire p {
+  color: var(--light);
+}
