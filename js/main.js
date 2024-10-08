@@ -367,7 +367,7 @@
   $(document).ready(function () {
     var items = [
       "Virtual Assistant",
-      "Project Manager",
+      "Real Estate Virtual Assistant",
       "Vacation Rental VA",
       "Virtual Coach",
       "Let's Collaborate!",
